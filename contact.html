@@ -120,6 +120,23 @@ button:hover {
     background: #ccc;
 }
 
+p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Footer Copyright */
+footer {
+    margin-top: 80px;
+    padding: 30px 20px;
+    border-top: 1px solid #333;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+}
+
 </style>
 </head>
 
@@ -132,7 +149,7 @@ button:hover {
        </div>
 
        <div class="menu-panel" id="menu">
-           <a href="indexfilm.html">Film</a>
+           <a href="index.html">Film</a>
            <a href="foto.html">Photography</a>
            <a href="contact.html">Contact</a>
        </div>
@@ -142,10 +159,26 @@ button:hover {
 
 <h1>About me</h1>
 
-<p>
-Soy...
-Puedes escribirme para proyectos, colaboraciones o información adicional.<br>
-Email: <strong>sss@ejemplo.com</strong>
+<p>My camera isn’t just a tool — it’s a compass, 
+    guiding me toward moments that can’t be staged, only witnessed. 
+    I’m drawn to the quiet truths of everyday life, the subtle shifts in expression or 
+    gesture that reveal entire worlds.<br><br>
+
+At the same time, I chase light. Not the obvious kind, but the light that shapes emotion 
+— the kind that bends into something intimate, tactile, almost dreamlike. 
+My process is instinctive and physical; I follow feeling first, image second. 
+Every frame begins as an atmosphere before it becomes a picture.<br><br>
+
+And beneath it all, there’s discipline: 
+the calm, the clarity, the devotion to a single image that carries the weight of a story. 
+I’m drawn to compositions that breathe, to spaces that open up, 
+to colors that don’t need to shout to be unforgettable.<br><br>
+
+My work lives in the space between observation and creation — between documentary honesty and poetic interpretation. 
+I photograph and film to create closeness, not through spectacle, but through attention.<br><br>
+
+I believe in images that stay with you because they don’t explain — they resonate.
+ 
 </p>
 
 <!--formulario de contacto-->
@@ -174,6 +207,10 @@ Email: <strong>sss@ejemplo.com</strong>
 
 <img src="assets/contact/yo.JPG" alt="Foto de contacto">
 
+<footer>
+    <p>&copy; <span id="year"></span> Veronica Storm. All rights reserved.</p>
+</footer>
+
 </div>
 
 <script>
@@ -181,6 +218,9 @@ function toggleMenu() {
     const menu = document.getElementById("menu");
     menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
 }
+
+// Automatisches Jahr im Copyright
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>

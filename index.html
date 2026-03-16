@@ -221,6 +221,16 @@ h1 {
     margin-top: 90px; /* 60px (topbar) + 30px extra space */
 }
 
+/* Footer Copyright */
+footer {
+    margin-top: 80px;
+    padding: 30px 20px;
+    border-top: 1px solid #333;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+}
+
     </style>
 </head>
 
@@ -233,7 +243,7 @@ h1 {
      </div>
 
      <div class="menu-panel" id="menu">
-         <a href="indexfilm.html">Film</a>
+         <a href="index.html">Film</a>
          <a href="foto.html">Photography</a>
          <a href="contact.html">Contact</a>
      </div>
@@ -396,12 +406,20 @@ h1 {
 
         </div>
     </div>
+
+    
+    <footer>
+    <p>&copy; <span id="year"></span> Veronica Storm. All rights reserved.</p>
+</footer>
+
+
     <script>
     function toggleMenu() {
         const menu = document.getElementById("menu");
         menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
     }
     </script>
+
 
 
     <script>
@@ -433,6 +451,9 @@ document.querySelectorAll('.item').forEach(item => {
         video.pause();
     });
 });
+
+// Automatisches Jahr im Copyright
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
